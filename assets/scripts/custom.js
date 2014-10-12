@@ -887,13 +887,13 @@ jQuery(document).ready(function($) {
 
 			if($thumbs.size() > 0 && window.videoplay === false ){
 
-				if( thumbsObj.homepage_show_thumbnails == 'true' && $togthumbs.hasClass('slide-up') === true ){
+				if($togthumbs.hasClass('slide-up') === true ){
 					$togthumbs.toggleThumbnails('show', true, true);
 				}
 
-				if( !thumbsObj.homepage_show_thumbnails ){
-					$togthumbs.toggleThumbnails('hide', true, true);
-				}
+				// if( thumbsObj && !thumbsObj.homepage_show_thumbnails ){
+				// 	$togthumbs.toggleThumbnails('hide', true, true);
+				// }
 
 			}
 
@@ -1114,7 +1114,7 @@ jQuery(document).ready(function($) {
     // hide expander, if no bg is set
     setTimeout(function(){
       $superbg.livequery(function(){
-        if( $(this).find('img[src*="http"]').size() <= 0 ) {
+        if( $(this).find('img[src*="asset"]').size() <= 0 ) {
           $expander.fadeOut();
         }
       });
